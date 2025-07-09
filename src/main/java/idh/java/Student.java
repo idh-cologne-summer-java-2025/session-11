@@ -1,26 +1,32 @@
 package idh.java;
 
 public class Student {
-    String name;
-    int id;
-    
-    static int lastId;
+	private String name;
+	private int id;
 
-    public Student(String name) {
-	this.id = lastId++;
-	this.name = name;
-    }
+	static int lastId = 7000001;
 
-    @Override
-    public String toString() {
-	return this.name + " (Id: " + this.id + ")";
-    }
+	public Student(String name) {
+		this.id = lastId++;
+		this.name = name;
+	}
 
-    public static void main(String[] args) {
-	System.out.println(Student.lastId);
-	System.out.println(Student.class);
+	@Override
+	public String toString() {
+		return this.name + " (Id: " + this.id + ")";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
 	
-	Class<?> cls = Student.class;
-
-    }
+	
 }

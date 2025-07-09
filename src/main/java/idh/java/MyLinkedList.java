@@ -19,7 +19,6 @@ public class MyLinkedList<T> implements List<T> {
 	
 	@Override
 	public int size() {
-		// TODO Implement!
 		int i = 0;
 		for (T x: this)
 			i++;
@@ -33,7 +32,6 @@ public class MyLinkedList<T> implements List<T> {
 
 	@Override
 	public boolean contains(Object o) {
-		// TODO Implement!
 		for (T x : this)
 			if (o.equals(x))
 				return true;
